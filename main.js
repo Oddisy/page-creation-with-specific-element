@@ -1,10 +1,10 @@
 
-        // Function to get the current day of the week
+        // Function to get the current day of the week using date api
         const getDayOfWeek = () =>  {
-            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const currentDate = new Date();
-            const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
-            return dayOfWeek;
+            const weekDay = weekDays[currentDate.getUTCDay()];
+            return weekDay;
         }
 
         // Function to get the current UTC time in milliseconds
@@ -13,6 +13,6 @@
             return currentTime;
         }
 
-        // Set the content for the current day of the week and current UTC time elements
+        // render the content for the current day of the week and current UTC time elements
         document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Current Day of the Week: ${getDayOfWeek()}`;
         document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${getCurrentUTCTime()} milliseconds`;
