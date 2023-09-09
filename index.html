@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<h1 data-testid="slackUserName">Ogunleye Odunayo</h1>
+				<div>
+					<img
+						src="./assets/Odunayo.jpeg"
+						alt="Ogunleye Odunayo"
+						data-testid="slackDisplayImage"
+					/>
+				</div >
+                <div class="js-output">
+				<p class="day" data-testid="currentDayOfTheWeek"></p>
+				<p class="time" data-testid="currentUTCTime"></p>
+                </div>
+				<p class="track" data-testid="myTrack">Frontend</p>
+				<p class="repo" data-testid="githubURL">
+					Repository ->
+					<a href="https://github.com/Oddisy" target="_blank"
+						>GitHub Repository</a
+					>
+				</p>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
