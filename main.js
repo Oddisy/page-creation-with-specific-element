@@ -8,11 +8,14 @@
         }
 
         // Function to get the current UTC time in milliseconds
-        const  getCurrentUTCTime = () =>  {
+        const  getCurrentTime = () =>  {
             const currentTime = new Date().getTime();
             return currentTime;
         }
 
         // render the content for the current day of the week and current UTC time elements
-        document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Current Day of the Week: ${getDayOfWeek()}`;
-        document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${getCurrentUTCTime()} milliseconds`;
+        document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Today is : ${getDayOfWeek()}`;
+        document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${getCurrentTime()} milliseconds`;
+setInterval(() => {
+    getCurrentTime()
+}, 100);
